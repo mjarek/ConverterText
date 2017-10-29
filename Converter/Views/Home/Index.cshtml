@@ -9,21 +9,30 @@
     <h2>Convert text into specific format</h2>
     
 </div>
+<div>
+    @using (Html.BeginForm())
+    {
 
 
         @Html.DropDownListFor(m => m.ExpectedType,
-                    new SelectList(Enum.GetValues(typeof(TypeFile.TypeFiles))),
-                    "Select expected type")
-
- 
- "Wprowadz tekst:" @Html.EditorFor(model => model.MyText, new { htmlAttributes = new { @class = "form-control" } })
-
-<input type="submit" value="Try Convert" />
-                   
-                
-            
-      
-      
+                            new SelectList(Enum.GetValues(typeof(TypeFile.TypeFiles))),
+                            "Select expected type")
 
 
-    
+        @Html.EditorFor(model => model.MyText, new { htmlAttributes = new { @class = "form-control" } })
+
+        @*<input type="submit" value="Try Convert" onclick="location.href='@Url.Action("About","Home")'" />*@
+
+        <button class="btn btn-default" type="button" id="tryConvert" value="Try convert"
+                onclick="location.href='@Url.Action("About", "Home")'">Try convert</button>
+
+
+
+    }
+</div>
+
+
+
+
+
+
