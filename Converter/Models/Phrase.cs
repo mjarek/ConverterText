@@ -5,16 +5,8 @@ using System.Web;
 
 namespace Converter.Models
 {
-    public class TypeFile
+    public class Phrase
     {
-
-        
-        public enum TypeFiles
-        {
-            Csv,
-            Xml
-        }
-
-
+         public SortedList<string,string> ComponentOfPhrase { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿@using Converter.Models
 
-@model InputText
+@model InputData
 @{
     ViewBag.Title = "Home Page";
 }
@@ -10,25 +10,32 @@
     
 </div>
 <div>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("TryConvert", "Convert", FormMethod.Post))
     {
 
 
         @Html.DropDownListFor(m => m.ExpectedType,
-                            new SelectList(Enum.GetValues(typeof(TypeFile.TypeFiles))),
+                            new SelectList(Enum.GetValues(typeof(TypeConverter.TypeConverters))),
                             "Select expected type")
 
 
         @Html.EditorFor(model => model.MyText, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.MyText, "", new { @class = "text-danger" })
 
-        @*<input type="submit" value="Try Convert" onclick="location.href='@Url.Action("About","Home")'" />*@
+       
 
-        <button class="btn btn-default" type="button" id="tryConvert" value="Try convert"
-                onclick="location.href='@Url.Action("About", "Home")'">Try convert</button>
+        @*<button class="btn btn-default" type="submit" id="tryConvert" value="Try convert"
+                onclick="location.href='@Url.Action("TryConvert", "Convert")'">Try convert</button>*@
+        <input type="submit" name="Upload" value="Try Convert" />
+
+
+       
 
 
 
     }
+
+    
 </div>
 
 
