@@ -20,10 +20,10 @@ namespace Converter.Controllers
         {
             var manager = new ManagerParsing(text);
 
-           var a =  manager.CreateConverter(text.ExpectedType.ToString(), text);
+           var myConverter =  manager.CreateConverter(text.ExpectedType.ToString(), text);
 
 
-            var words = a.Parse();
+            var words = myConverter.Parse();
            
 
             ViewBag.Message = words.ToString();
