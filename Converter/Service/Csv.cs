@@ -39,7 +39,7 @@ namespace Converter.Service
             int counter = 1;
             foreach (var item in longestPhrase.ComponentOfPhrase)
             {
-                result.Append(Resource.ColumnName+" ");
+                result.Append(Resource.TagWord+" ");
                 result.Append(counter++.ToString());
                 result.Append(Resource.DelimeterComma);
             }
@@ -54,7 +54,7 @@ namespace Converter.Service
                 
             foreach (var item in _phrases)
             {
-                result.Append(Resource.RowName+" ");
+                result.Append(Resource.TagSentence+" ");
                 result.Append(counter++.ToString());
 
                var enumer= item.ComponentOfPhrase.GetEnumerator();

@@ -47,10 +47,10 @@ namespace Converter.Service
 
             foreach (var item in _phrases) { 
             
-               xmltextWriter.WriteStartElement(Resource.ColumnName.ToLower());
+               xmltextWriter.WriteStartElement(Resource.TagSentence.ToLower());
                 foreach (var word in item.ComponentOfPhrase)
                 {
-                   xmltextWriter.WriteElementString(Resource.RowName.ToLower(), word.Value);
+                   xmltextWriter.WriteElementString(Resource.TagWord.ToLower(), word.Value);
                 }
               
                 xmltextWriter.WriteEndElement();

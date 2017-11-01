@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnName" xml:space="preserve">
-    <value>Word</value>
-  </data>
   <data name="ContentRichtext" xml:space="preserve">
     <value>text/richtext</value>
   </data>
@@ -132,10 +129,13 @@
   <data name="LabelForStartedForm" xml:space="preserve">
     <value>Write your text here</value>
   </data>
-  <data name="RowName" xml:space="preserve">
-    <value>Sentence</value>
-  </data>
   <data name="StartXmlElement" xml:space="preserve">
     <value>text</value>
+  </data>
+  <data name="TagSentence" xml:space="preserve">
+    <value>Sentence</value>
+  </data>
+  <data name="TagWord" xml:space="preserve">
+    <value>Word</value>
   </data>
 </root>

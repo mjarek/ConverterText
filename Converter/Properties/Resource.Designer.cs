@@ -61,15 +61,6 @@ namespace Converter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Word.
-        /// </summary>
-        public static string ColumnName {
-            get {
-                return ResourceManager.GetString("ColumnName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to text/richtext.
         /// </summary>
         public static string ContentRichtext {
@@ -106,20 +97,29 @@ namespace Converter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sentence.
-        /// </summary>
-        public static string RowName {
-            get {
-                return ResourceManager.GetString("RowName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to text.
         /// </summary>
         public static string StartXmlElement {
             get {
                 return ResourceManager.GetString("StartXmlElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string TagSentence {
+            get {
+                return ResourceManager.GetString("TagSentence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word.
+        /// </summary>
+        public static string TagWord {
+            get {
+                return ResourceManager.GetString("TagWord", resourceCulture);
             }
         }
     }

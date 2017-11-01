@@ -9,15 +9,10 @@ using System.Web;
 
 namespace Converter.Service
 {
-    public class ManagerParsing
+    public class ManagerParsing : IManagerParsing
     {
-        private InputData _text;
-        private Dictionary<string,Type> _converters;
-        public ManagerParsing(InputData text)
-        {
-            _text = text;
-            LoadConverters();
-        }
+       private Dictionary<string,Type> _converters;
+      
 
         private void LoadConverters()
         {
@@ -33,9 +28,11 @@ namespace Converter.Service
             }
         }
 
-        public IConverter CreateConverter(string name, InputData data)
+        
+        public IConverter CreateConverter(InputData data)
         {
-            Type type = _converters.Where(x => x.Key.ToString() == name).Select(x => x.Value).FirstOrDefault();
+            LoadConverters();
+            Type type = _converters.Where(x => x.Key.ToString() == data.ExpectedType.ToString()).Select(x => x.Value).FirstOrDefault();
 
             if (type != null)
             {

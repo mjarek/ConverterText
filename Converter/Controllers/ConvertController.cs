@@ -1,5 +1,6 @@
 ﻿using Converter.Models;
 using Converter.Service;
+using Converter.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +11,22 @@ namespace Converter.Controllers
 {
     public class ConvertController : Controller
     {
+       private  IManagerParsing _managerParsing;
+
+        
+        public ConvertController(IManagerParsing managerParsing)
+        {
+            _managerParsing = managerParsing;
+        }
         // GET: Convert
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult TryConvert(InputData text)
+        public ActionResult TryConvert(InputData data)
         {
-            var manager = new ManagerParsing(text);
-
-            var myConverter = manager.CreateConverter(text.ExpectedType.ToString(), text);
+            var myConverter = _managerParsing.CreateConverter(data);
             return Content(myConverter.Parse(), myConverter.GetContentType());
         }
 
