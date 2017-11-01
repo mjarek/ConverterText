@@ -10,20 +10,16 @@ using static Converter.Service.WorkWithText;
 
 namespace Converter.Service
 {
-    public class Csv :IConverter
+    public class Csv : ConverterData,  IConverter
     {
-        private InputData _data;
-        private List<Phrase> _phrases;
+        
         public Csv(InputData data)
         {
             _data = data;
-
             _phrases = Splitter(_data.MyText);
         }
 
-       
-
-        public string Parse()
+       public string Parse()
         {
             var result = new StringBuilder();
             result.Append(GetColumnName());

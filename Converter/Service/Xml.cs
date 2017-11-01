@@ -13,15 +13,11 @@ using System.Xml.Linq;
 
 namespace Converter.Service
 {
-    public class Xml :IConverter
+    public class Xml : ConverterData, IConverter
     {
-        
-        private InputData _data;
-        private List<Phrase> _phrases;
         public Xml(InputData data)
         {
             _data = data;
-           
             _phrases = Splitter(_data.MyText);
         }
 
@@ -40,8 +36,6 @@ namespace Converter.Service
         {
             StringWriter stringWriter = new Utf8StringWriter();
             XmlTextWriter xmltextWriter = new XmlTextWriter(stringWriter) { Formatting = Formatting.Indented };
-
-
             xmltextWriter.WriteStartDocument(true);
             xmltextWriter.WriteStartElement(Resource.StartXmlElement);
 
@@ -55,9 +49,6 @@ namespace Converter.Service
               
                 xmltextWriter.WriteEndElement();
             }
-
-
-          
             xmltextWriter.WriteEndElement();
             var result = stringWriter.ToString();
             xmltextWriter.Flush();

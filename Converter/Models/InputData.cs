@@ -9,7 +9,7 @@ namespace Converter.Models
 {
     public class InputData
     {
-       // public string Label = Converter.Properties.Resource.LabelForStartedForm;
+     
         public TypeConverters ExpectedType { get; set; }
 
         [DataType(DataType.MultilineText)]

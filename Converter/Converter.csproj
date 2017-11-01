@@ -182,6 +182,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConverterData.cs" />
     <Compile Include="Models\InputData.cs" />
     <Compile Include="Models\Phrase.cs" />
     <Compile Include="Models\TypeConverter.cs" />
