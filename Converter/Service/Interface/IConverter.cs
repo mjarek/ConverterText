@@ -10,5 +10,6 @@ namespace Converter.Service.Interface
     {
 
         string Parse();
+        string GetContentType();
     }
 }

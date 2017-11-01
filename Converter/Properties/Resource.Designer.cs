@@ -61,6 +61,33 @@ namespace Converter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Word.
+        /// </summary>
+        public static string CsvColumnName {
+            get {
+                return ResourceManager.GetString("CsvColumnName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string CsvRowName {
+            get {
+                return ResourceManager.GetString("CsvRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ,.
+        /// </summary>
+        public static string DelimeterComma {
+            get {
+                return ResourceManager.GetString("DelimeterComma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Write your text here.
         /// </summary>
         public static string LabelForStartedForm {

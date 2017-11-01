@@ -20,16 +20,9 @@ namespace Converter.Controllers
         {
             var manager = new ManagerParsing(text);
 
-           var myConverter =  manager.CreateConverter(text.ExpectedType.ToString(), text);
-
-
-            var words = myConverter.Parse();
-           
-
-            ViewBag.Message = words.ToString();
-            return View();
+            var myConverter = manager.CreateConverter(text.ExpectedType.ToString(), text);
+            return Content(myConverter.Parse(), myConverter.GetContentType());
         }
-
 
     }
 }
