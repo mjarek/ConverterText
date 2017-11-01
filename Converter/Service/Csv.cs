@@ -39,7 +39,7 @@ namespace Converter.Service
             int counter = 1;
             foreach (var item in longestPhrase.ComponentOfPhrase)
             {
-                result.Append(Resource.CsvColumnName+" ");
+                result.Append(Resource.ColumnName+" ");
                 result.Append(counter++.ToString());
                 result.Append(Resource.DelimeterComma);
             }
@@ -54,7 +54,7 @@ namespace Converter.Service
                 
             foreach (var item in _phrases)
             {
-                result.Append(Resource.CsvRowName+" ");
+                result.Append(Resource.RowName+" ");
                 result.Append(counter++.ToString());
 
                var enumer= item.ComponentOfPhrase.GetEnumerator();
@@ -73,7 +73,7 @@ namespace Converter.Service
 
         public string GetContentType()
         {
-            return "text/richtext";
+            return Resource.ContentRichtext;
         }
     }
 }

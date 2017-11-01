@@ -9,6 +9,7 @@ using static Converter.Service.WorkWithText;
 using Converter.Properties;
 using System.Xml;
 using System.IO;
+using System.Xml.Linq;
 
 namespace Converter.Service
 {
@@ -26,7 +27,7 @@ namespace Converter.Service
 
         public string GetContentType()
         {
-            return "text/xml";
+            return Resource.ContentRichtext;
         }
 
         public string Parse()
@@ -37,19 +38,19 @@ namespace Converter.Service
 
         private string CreateXml()
         {
-            StringWriter stringWriter = new StringWriter();
+            StringWriter stringWriter = new Utf8StringWriter();
             XmlTextWriter xmltextWriter = new XmlTextWriter(stringWriter) { Formatting = Formatting.Indented };
 
-           
-            xmltextWriter.WriteStartDocument();
-            xmltextWriter.WriteStartElement("text");
+
+            xmltextWriter.WriteStartDocument(true);
+            xmltextWriter.WriteStartElement(Resource.StartXmlElement);
 
             foreach (var item in _phrases) { 
             
-               xmltextWriter.WriteStartElement("sentence");
+               xmltextWriter.WriteStartElement(Resource.ColumnName.ToLower());
                 foreach (var word in item.ComponentOfPhrase)
                 {
-                   xmltextWriter.WriteElementString("word", word.Value);
+                   xmltextWriter.WriteElementString(Resource.RowName.ToLower(), word.Value);
                 }
               
                 xmltextWriter.WriteEndElement();
@@ -65,5 +66,9 @@ namespace Converter.Service
             return result;
 
         }
+
+        
     }
+
+  
 }

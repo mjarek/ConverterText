@@ -169,6 +169,7 @@
     <Compile Include="Service\Csv.cs" />
     <Compile Include="Service\Interface\IConverter.cs" />
     <Compile Include="Service\ManagerParsing.cs" />
+    <Compile Include="Service\Utf8StringWriter.cs" />
     <Compile Include="Service\WorkWithText.cs" />
     <Compile Include="Service\Xml.cs" />
   </ItemGroup>

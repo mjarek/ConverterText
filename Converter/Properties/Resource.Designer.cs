@@ -63,18 +63,27 @@ namespace Converter.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Word.
         /// </summary>
-        public static string CsvColumnName {
+        public static string ColumnName {
             get {
-                return ResourceManager.GetString("CsvColumnName", resourceCulture);
+                return ResourceManager.GetString("ColumnName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sentence.
+        ///   Looks up a localized string similar to text/richtext.
         /// </summary>
-        public static string CsvRowName {
+        public static string ContentRichtext {
             get {
-                return ResourceManager.GetString("CsvRowName", resourceCulture);
+                return ResourceManager.GetString("ContentRichtext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to text/xml.
+        /// </summary>
+        public static string ContentXml {
+            get {
+                return ResourceManager.GetString("ContentXml", resourceCulture);
             }
         }
         
@@ -93,6 +102,24 @@ namespace Converter.Properties {
         public static string LabelForStartedForm {
             get {
                 return ResourceManager.GetString("LabelForStartedForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sentence.
+        /// </summary>
+        public static string RowName {
+            get {
+                return ResourceManager.GetString("RowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to text.
+        /// </summary>
+        public static string StartXmlElement {
+            get {
+                return ResourceManager.GetString("StartXmlElement", resourceCulture);
             }
         }
     }
