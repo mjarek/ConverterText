@@ -112,3 +112,5 @@ E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Unity.Interception.pdb
 E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Unity.Interception.Configuration.pdb
 E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Unity.RegistrationByConvention.pdb
 E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Unity.ServiceLocation.pdb
+E:\Repozytorium\ConverterText\ConverterText\Converter\bin\nunit.framework.dll
+E:\Repozytorium\ConverterText\ConverterText\Converter\bin\nunit.framework.xml

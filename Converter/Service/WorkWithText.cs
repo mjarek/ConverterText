@@ -1,4 +1,5 @@
 ﻿using Converter.Models;
+using Converter.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Converter.Service
 
             foreach (var item in text.Split(Phrase.DelimeterPhrase).ToList())
             {
-                result.Add(counter++, item);
+                if(!string.IsNullOrWhiteSpace(item)) result.Add(counter++, item);
             }
             return result;
 
@@ -29,9 +30,8 @@ namespace Converter.Service
            
                 foreach (var item in text.Split(Phrase.DelimeterWord).ToList())
                 {
-                    var cleanWord = Regex.Replace(item, @"\t|\n|\r|,", "");
-                    if (string.IsNullOrEmpty(cleanWord)) continue;
-                    result.Add(cleanWord, cleanWord);
+                    var cleanWord = Regex.Replace(item, Resource.RegexPattern, string.Empty);
+                    if (!string.IsNullOrWhiteSpace(cleanWord))result.Add(cleanWord, cleanWord);
                  }
             return result;
 

@@ -129,6 +129,9 @@
   <data name="LabelForStartedForm" xml:space="preserve">
     <value>Write your text here</value>
   </data>
+  <data name="RegexPattern" xml:space="preserve">
+    <value>\t|\n|\r|,</value>
+  </data>
   <data name="StartXmlElement" xml:space="preserve">
     <value>text</value>
   </data>

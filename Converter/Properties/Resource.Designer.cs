@@ -97,6 +97,15 @@ namespace Converter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to \t|\n|\r|,.
+        /// </summary>
+        public static string RegexPattern {
+            get {
+                return ResourceManager.GetString("RegexPattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to text.
         /// </summary>
         public static string StartXmlElement {
