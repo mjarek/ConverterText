@@ -18,7 +18,7 @@ namespace Converter.Controllers
         {
             _managerParsing = managerParsing;
         }
-        // GET: Convert
+       
         public ActionResult Index()
         {
             return View();

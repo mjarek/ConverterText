@@ -16,9 +16,12 @@ namespace Converter.Service
             var result = new SortedList<int, string>();
             var counter = 0;
 
-            foreach (var item in text.Split(Phrase.DelimeterPhrase).ToList())
+            if (!string.IsNullOrEmpty(text))
             {
-                if(!string.IsNullOrWhiteSpace(item)) result.Add(counter++, item);
+                foreach (var item in text.Split(Phrase.DelimeterPhrase).ToList())
+                {
+                    if (!string.IsNullOrWhiteSpace(item)) result.Add(counter++, item);
+                }
             }
             return result;
 

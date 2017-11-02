@@ -61,6 +61,16 @@ namespace Converter.Tests {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+        ///&lt;text /&gt;.
+        /// </summary>
+        internal static string EmptyStringOutput {
+            get {
+                return ResourceManager.GetString("EmptyStringOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to   Mary   had a little  lamb  . 
         ///
         ///
