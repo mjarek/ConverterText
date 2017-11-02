@@ -113,4 +113,3 @@ E:\Repozytorium\ConverterText\ConverterText\Converter\obj\Debug\Converter.pdb
 E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Converter.dll.config
 E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Converter.dll
 E:\Repozytorium\ConverterText\ConverterText\Converter\bin\Converter.pdb
-E:\Repozytorium\ConverterText\ConverterText\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache

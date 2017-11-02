@@ -16,11 +16,11 @@ namespace Converter.App_Start
         {
 
             IUnityContainer container = new UnityContainer();
-            registerServices(container);
+            RegisterServices(container);
             DependencyResolver.SetResolver(new UnityDepencencyResolver(container));
         }
 
-        private static void registerServices(IUnityContainer container)
+        private static void RegisterServices(IUnityContainer container)
         {
             container.RegisterType<IManagerParsing, ManagerParsing>();
         }
